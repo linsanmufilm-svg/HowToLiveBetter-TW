@@ -127,7 +127,8 @@ let SEQ = 0;
 
 // ---------- 取歷史 ----------
 const sinceTs = Math.floor(new Date(`${SINCE}T00:00:00+08:00`).getTime() / 1000);
-const twBase = git(['log', '-1', '--first-parent', '--format=%H', '--grep=^台灣版基準', 'HEAD']).toString().trim();
+// 不限第一父提交、不錨定行首：PR 的合併提交、merge 和 squash 合併後都要找得到它
+const twBase = git(['log', '-1', '--format=%H', '--grep=台灣版基準', 'HEAD']).toString().trim();
 const base = twBase || git(['rev-list', '-1', '--first-parent', `--before=${sinceTs}`, 'HEAD']).toString().trim();
 if (!base) throw new Error(`找不到 ${SINCE} 之前的提交。CI 上 checkout 要加 fetch-depth: 0`);
 const log = git(['log', '--first-parent', '--reverse', '--diff-merges=first-parent', '--name-only',
