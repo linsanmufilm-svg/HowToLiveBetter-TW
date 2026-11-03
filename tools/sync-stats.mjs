@@ -67,7 +67,7 @@ const tagged = ratio['極高'] + ratio['高'] + ratio['一般'];
 if (tagged !== entries) console.warn(`警告：有 ${entries - tagged} 條缺成本標籤，價效比三檔對不上條目數`);
 if (grade.A + grade.B + grade.C !== entries) console.warn('警告：證據等級行數和條目數對不上，檢查有沒有條目漏寫證據等級');
 
-// 三檔百分比用最大余數法分配：先向下取整，剩下的百分點按小數部分從大到小補。
+// 三檔百分比用最大餘數法分配：先向下取整，剩下的百分點按小數部分從大到小補。
 // 三個數各自四捨五入會湊出 99 或者 101（2026-09-21 加第 33 節時碰到過），這裡保證加起來正好 100。
 const ORDER = ['極高', '高', '一般'];
 const pct = {}, rem = {};
@@ -85,9 +85,9 @@ console.log('');
 
 const EDITS = [
   ['README.md', '首屏條目數', /(\d+) 條建議/g, `${entries} 條建議`],
-  ['README.md', '條目徽章', /%E6%9D%A1%E7%9B%AE-(\d+)%20%E6%9D%A1/g, `%E6%9D%A1%E7%9B%AE-${entries}%20%E6%9D%A1`],
+  ['README.md', '條目徽章', /%E6%A2%9D%E7%9B%AE-(\d+)%20%E6%A2%9D/g, `%E6%A2%9D%E7%9B%AE-${entries}%20%E6%A2%9D`],
   ['README.md', '證據分級徽章', /A%20(\d+)%20%C2%B7%20B%20\d+%20%C2%B7%20C%20\d+/g, `A%20${grade.A}%20%C2%B7%20B%20${grade.B}%20%C2%B7%20C%20${grade.C}`],
-  ['README.md', '文獻連結徽章', /-(\d+)%20%E6%9D%A1%E9%93%BE%E6%8E%A5/g, `-${links}%20%E6%9D%A1%E9%93%BE%E6%8E%A5`],
+  ['README.md', '文獻連結徽章', /-(\d+)%20%E6%A2%9D%E9%80%A3%E7%B5%90/g, `-${links}%20%E6%A2%9D%E9%80%A3%E7%B5%90`],
   ['README.md', '怎麼讀裡的 A 級數', /大型試驗的 (\d+) 條/g, `大型試驗的 ${grade.A} 條`],
   ['README.md', '怎麼讀裡的極高條數', /勾選價效比「極高」，得到 (\d+) 條/g, `勾選價效比「極高」，得到 ${ratio['極高']} 條`],
   ['README.md', '證據分級段', /全書 (\d+) 條中 A 級 \d+ 條、B 級 \d+ 條、C 級 \d+ 條，另有 \d+ 條標註了爭議、\d+ 處/g,
@@ -173,7 +173,7 @@ const target = join(ROOT, 'og.png');
 const startedAt = Date.now();
 // Chrome 把「xxx bytes written」這類資訊寫在 stderr 上，不是報錯，直接丟掉
 spawnSync(chrome, [
-  '--headless', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1',
+  '--headless', '--disable-gpu', ...(process.getuid?.() === 0 ? ['--no-sandbox'] : []), '--hide-scrollbars', '--force-device-scale-factor=1',
   '--window-size=1200,630', `--user-data-dir=${profile}`, `--screenshot=${target}`,
   pathToFileURL(join(ROOT, 'tools', 'og.html')).href,
 ], { stdio: 'ignore' });
