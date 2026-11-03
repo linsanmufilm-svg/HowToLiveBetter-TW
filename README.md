@@ -27,12 +27,12 @@
 
 原書的電子書由果麥文化獨家出品，那是原作者的簡體版，不是這個台灣版。
 
-[![線上檢索](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E6%A3%80%E7%B4%A2-%E7%82%B9%E8%BF%99%E9%87%8C%E6%89%93%E5%BC%80-3451b2?style=flat-square)](https://linsanmufilm-svg.github.io/HowToLiveBetter-TW/)
-[![條目](https://img.shields.io/badge/%E6%9D%A1%E7%9B%AE-767%20%E6%9D%A1-18794e?style=flat-square)](#目錄)
-[![證據分級](https://img.shields.io/badge/%E8%AF%81%E6%8D%AE%E5%88%86%E7%BA%A7-A%20495%20%C2%B7%20B%20220%20%C2%B7%20C%2052-915930?style=flat-square)](#證據分級)
-[![原始文獻](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8C%AE-2531%20%E6%9D%A1%E9%93%BE%E6%8E%A5-565a5f?style=flat-square)](docs/核實記錄/)
-[![許可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#許可)
-[![Claude Code 協助編寫](https://img.shields.io/badge/Claude%20Code-%E5%8D%8F%E5%8A%A9%E7%BC%96%E5%86%99-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.com/claude-code)
+[![線上檢索](https://img.shields.io/badge/%E7%B7%9A%E4%B8%8A%E6%AA%A2%E7%B4%A2-%E9%BB%9E%E9%80%99%E8%A3%A1%E9%96%8B%E5%95%9F-3451b2?style=flat-square)](https://linsanmufilm-svg.github.io/HowToLiveBetter-TW/)
+[![條目](https://img.shields.io/badge/%E6%A2%9D%E7%9B%AE-767%20%E6%A2%9D-18794e?style=flat-square)](#目錄)
+[![證據分級](https://img.shields.io/badge/%E8%AD%89%E6%93%9A%E5%88%86%E7%B4%9A-A%20495%20%C2%B7%20B%20220%20%C2%B7%20C%2052-915930?style=flat-square)](#證據分級)
+[![原始文獻](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8D%BB-2531%20%E6%A2%9D%E9%80%A3%E7%B5%90-565a5f?style=flat-square)](docs/核實記錄/)
+[![許可](https://img.shields.io/badge/%E8%A8%B1%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#許可)
+[![Claude Code 協助編寫](https://img.shields.io/badge/Claude%20Code-%E5%8D%94%E5%8A%A9%E7%B7%A8%E5%AF%AB-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.com/claude-code)
 
 ### [開啟線上檢索頁](https://linsanmufilm-svg.github.io/HowToLiveBetter-TW/) · [讓 AI 照書回答（skill）](skills/life-decision-guide/README.md)
 
@@ -241,7 +241,7 @@ A 級只說明「有具體數字、出處可核」，不說明這個數字一定
 | 總死亡率 | 一段時間裡，一群人當中死掉的人佔多大比例，不管死於什麼原因。本書用它衡量「活得久不久」。研究原文裡叫全因死亡率，英文縮寫 ACM |
 | HR | 瞬時風險比。比較的是隨訪過程中，仍未出事的人在當時出事的快慢。HR 0.87 表示這一風險低 13%，不等於一段時間內出事的機率低 13% |
 | RR | 相對風險。兩組人在相同觀察期內出事的機率之比。RR 0.87 表示相對低 13%，不是每一百人少出事 13 個 |
-| OR | 比值比。先分別算出兩組「出事的機率 ÷ 不出事的機率」，再比較這兩個比值。它不等於機率之比，只有結局很少見時才近似 RR，不能一律換算成機率高几成、低幾成 |
+| OR | 比值比。先分別算出兩組「出事的機率 ÷ 不出事的機率」，再比較這兩個比值。它不等於機率之比，只有結局很少見時才近似 RR，不能一律換算成機率高幾成、低幾成 |
 | IRR | 發病率之比。發病率是一段時間裡新得這個病的人佔多大比例，兩組相除，讀法同 RR |
 | RaR | 發生次數之比。比的是事情發生了多少次（比如摔了多少跤），不是多少人出事，讀法同 RR |
 | 標準化死亡比 | 英文縮寫 SMR。這群人實際死了多少人，除以「同樣年齡的普通人本該死多少人」。5.86 就是死的人數是同齡人的 5.86 倍 |
